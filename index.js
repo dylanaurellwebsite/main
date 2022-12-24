@@ -1,10 +1,7 @@
 window.onload = function () {
  
   var data = [
-    [ '.r$r', '8clrB' ],
-    [ 'U$E2', 'uK' ],
-    [ '4]rl', 'Mrtr29r' ],
-    [ '.!xr2r', '#BVnB!]ir' ]
+    [ 'brandon', 'jelek' ]
   ]
   
   var datatemp = []
@@ -15,7 +12,7 @@ window.onload = function () {
     }
   }
   
-  data = datatemp
+  datatemp = datatemp
   
   var questionExist = []
   var pos = -1
