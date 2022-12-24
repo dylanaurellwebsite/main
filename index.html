@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="encryption-5.js"></script>
+        <script src="index.js"></script>
+        <style>
+            body{
+                background-color: skyblue;
+                user-select: none;
+            }
+            input::selection{
+                background-color: red;
+            }
+            *{
+                margin: 0;
+            }
+        </style>
+        <style>
+            .wrap{
+                padding-top: 30px;
+            }
+            .ask-title{
+                width: 300px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 30px;
+                font-weight: bolder;
+                text-align: center;
+            }
+            .search-input{
+                width: 316px;
+                height: 32px;
+                background-color: skyblue;
+                border: 2px solid white;
+                border-radius: 10px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                outline: none;
+                padding: 2px 10px;
+            }
+            .search-result{
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 700px;
+                border: 2px solid black;
+                border-radius:15px;
+            }
+            .search-result-box{
+                padding: 0px 0px 3px 8px;
+                margin: 10px;
+                border-radius: 8px;
+                cursor: pointer;
+                overflow: hidden;
+            }
+            .blank:hover{
+                background-color: transparent;
+            }
+            .answer-question{
+                position: fixed;
+                width: 600px;
+                height: 400px;
+                background-color: white;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%)translateY(-50%);
+                border-radius: 20px;
+                z-index: 2;
+                display: none;
+            }
+            .answer-question-close{
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                top: 0px;
+                left: 0px;
+                z-index: 1;
+                background-color: #00000080;
+                display: none;
+            }
+            .answer-question-q{
+                width: 560px;
+                font-size: 35px;
+                margin: 20px 0px 0px 20px;
+            }
+
+            .answer-question-a{
+                width: 560px;
+                font-size: 25px;
+                margin: 20px 0px 0px 20px;
+            }
+        </style>
+        <style>
+            .box{}
+        </style>
+        <style>
+            #app-1{display: block;}
+            #app-2{display: none;}
+        </style>
+    </head>
+    <body>
+        <div id="app-1">
+            <div class="wrap">
+                <p class="ask-title">What do you need ?</p>
+            </div>
+            <div class="wrap">
+                <input type="text" class="search-input" id="search-input"/>
+            </div>
+            <div class="wrap">
+                <div class="search-result" id="search-result">
+                    <p class="search-result-box blank">Search result .....</p>
+                </div>
+            </div>
+            <div class="wrap"></div>
+        </div>
+        
+        <div id="app-2">
+            
+        </div>
+        
+        <div id="pop-up">
+            <div class="answer-question" id="answer-question">
+                <p class="answer-question-q" id="a-q-q"></p>
+                <p class="answer-question-a" id="a-q-a"></p>
+            </div>
+            <div class="answer-question-close" id="answer-question-close"></div>
+        </div>
+    </body>
+</html>
